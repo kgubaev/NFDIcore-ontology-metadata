@@ -4,7 +4,7 @@ Describing the metadata of semantic resources (repositories?) with NFDIcore
 ## TOC
  - intro
  - harvester tool description
- - ontology structure
+ - ontology metadata
  - describing metadata
  - class definitions
 
@@ -13,7 +13,7 @@ Describing the metadata of semantic resources (repositories?) with NFDIcore
 
 Ontologies are crucial for knowledge sharing and reuse on the Semantic Web, but finding suitable ontologies can be challenging.  Effective ontology discovery and reuse depend on comprehensive metadata descriptions, but current metadata schemas have limitations, including limited scope, lack of harmonization, and maintenance issues.  This paper introduces a metadata schema for ontology repositories based on the Basic Formal Ontology (BFO) 2020 and the NFDIcore ontology new release 3.0.  This schema leverages BFO's standardized framework and NFDIcore's promising approach to knowledge graph managing, to address the limitations of existing schemas and enhance semantic interoperability and reasoning over metadata items.
 
-## Ontology structure
+## Describing ontology metadata
 
 ### 1. Ontology object
    
@@ -74,7 +74,7 @@ Then to provide the corresponding links objects they are string representation w
 * The ``nfdicore: File Data Item`` file object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/file.ttl^^xsd:string``.
 * The ``nfdicore:Document`` documentation object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/documentation.html^^xsd:string``.
 
-## Describing metadata
+
 
 ## Class definitions 
 
