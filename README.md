@@ -64,19 +64,15 @@ Properties:
 * ``dcat:download URL``  <br/>
 * ``nfdicore:has url``  <br/>
 * ``obo:continuant part of``  <br/>
+
 Nowadays, GitHub is a cornerstone of data exchange, particularly in the context of software development and increasingly for other types of data and information. Ontology is not an exception and very often the ontology and its corresponding files either the triple files or corresponding documentation ATC leaves within contents of some GitHub (gitlab?) repository. Therefore is crucial to reflect this information in the ontology metadata schema. We use the NFDIcore class Source Code repository, since the principles of data organization share a lot in common between the organized collections of triplet file (ontology), and source code files.
 
-The ontology repository contains files with the triplets that are the essence of the ontology. While each ``nfdicore: File Data Item`` ``is about`` ontology and its variant objects, it is also ``obo:continuant part of`` the nfdciore:Source Code Repository object. In this way we specify the belongings of the files to the repository. As each file contains has its download link in parentheses GitHub repository address, we use dcat:download URL object property to connect the file to its link object, which is of the nfdciore:Website class.  
-
-if present we instantiate the nfdicore:Document object standing for the ontology documentation, which obo:is about the ontology object. 
+The ontology repository contains files with the triplets that are the essence of the ontology. While each ``nfdicore: File Data Item`` ``is about`` ontology and its variant objects, it is also ``obo:continuant part of`` the nfdciore:Source Code Repository object. In this way we specify the belongings of the files to the repository. As each file contains has its download link in parentheses GitHub repository address, we use dcat:download URL object property to connect the file to its link object, which is of the nfdciore:Website class.  if present we instantiate the nfdicore:Document object standing for the ontology documentation, which obo:is about the ontology object. 
 
 Then to provide the corresponding links objects they are string representation we use an FDI core as URL data property:
-
-The ``nfdciore:Source Code Repository`` repository object ``nfdicore:has url`` the string, e.g., ``https://github.com/my-ontology^xsd:string``.
-
-The ``nfdicore: File Data Item`` file object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/file.ttl^^xsd:string``.
-
-The ``nfdicore:Document`` documentation object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/documentation.html^^xsd:string``.
+*The ``nfdciore:Source Code Repository`` repository object ``nfdicore:has url`` the string, e.g., ``https://github.com/my-ontology^xsd:string``.
+*The ``nfdicore: File Data Item`` file object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/file.ttl^^xsd:string``.
+*The ``nfdicore:Document`` documentation object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/documentation.html^^xsd:string``.
 
 ## Describing metadata
 
