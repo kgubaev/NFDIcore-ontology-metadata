@@ -74,7 +74,27 @@ Then to provide the corresponding links objects they are string representation w
 * The ``nfdicore: File Data Item`` file object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/file.ttl^^xsd:string``.
 * The ``nfdicore:Document`` documentation object ``nfdicore:has url`` the string, e.g., ``github.com/my-ontology/documentation.html^^xsd:string``.
 
+### 4. Ontology creators and contact points
+   
+Classes:
 
+* ``nfdicore:Agent``  <br/>
+* ``nfdicore:Person``  <br/>
+* ``nfdicore:Organization``  <br/>
+* ``nfdicore:Creator Role``  <br/>
+* ``nfdicore:Creative Process``  <br/>
+* ``nfdicore:Contact Point Role``  <br/>
+* ``nfdicore:Contacting Process``  <br/>
+
+Properties:
+
+* ``bfo:concretizes``  <br/>
+* ``bfo:realizes``  <br/>
+* ``bfo:bearer of``  <br/>
+* ``bfo:participates in``  <br/>
+* ``nfdicore: has creator``  <br/>
+* ``nfdicore: has contact point``  <br/>
+* ``obo:is about``  <br/>
 
 ## Class definitions 
 
