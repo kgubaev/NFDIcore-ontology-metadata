@@ -21,23 +21,40 @@ h1 - we treat the you're right of the ontology at the unique identifier. Hence, 
 1. Ontology object
    
 Clases:
-* Ontology
-* NameSpace
-* Title
-* Description
+* nfdciore:Ontology
+* nfdciore:NameSpace
+* nfdciore:Title
+* nfdciore:Description
+Properties:
+* obo:is about
+  
 The central object about which we discuss here is the ontology - an abstract concept, which stands for the designation and incorporates all its components: versions/modules/variants/ other artifacts. We treat the namespace of the ontology at the unique identifier. Hence, 1 namespace uri = 1 ontology object. Some people put number of the versions there either in fair slash release variant, etc., or even file extensions, which is the incorrect usage of namespace.  
-3 Properties:
+
 As proprties of the ontology, apart from the namespace URI, we have two types of text entities here: title and description.
+
+2. Ontology versions, variants and formats
+Classes:
+*nfdicore: Ontology Release Version
+*nfdicore: Ontology Variant
+*nfdicore: File Data Item
+
+
+
 
 2. Ontology repository
 
 Classes:
-* Source code repository
-* Format
-* Website
-Nowadays, GitHub is a cornerstone of data exchange, particularly in the context of software development and increasingly for other types of data and information. Ontology is not an exception and very often the ontology and its corresponding files either the triple files or corresponding documentation ATC leaves within contents of some GitHub (gitlab?) repository. Therefore is crucial to reflect this information in the ontology metadata schema. We use the NFDIcore class Source Code repository, since the principles of data organization share a lot in common between the organized collections of triplet file (ontology), and source code files. 
+* nfdciore:Source Code Repository
+* edam:Format
+* nfdciore:Website
+Properties:
+obo:is about
+dcat:download URL
+nfdicore:has url
+obo:continuant part of
+Nowadays, GitHub is a cornerstone of data exchange, particularly in the context of software development and increasingly for other types of data and information. Ontology is not an exception and very often the ontology and its corresponding files either the triple files or corresponding documentation ATC leaves within contents of some GitHub (gitlab?) repository. Therefore is crucial to reflect this information in the ontology metadata schema. We use the NFDIcore class Source Code repository, since the principles of data organization share a lot in common between the organized collections of triplet file (ontology), and source code files.
 
-
+The ontology repository contains files with the triplets that are the essence of the ontology. We use the has part relationships over; Continued part of, to specify the belongings of the files to the repository.
 
 ## Describing metadata
 
