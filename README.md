@@ -49,6 +49,8 @@ Similarly to what we have in software engineering repository for ontologies can 
 This way, **any** triplet-containig file, belonging to the ontology corresponds to **one variant** of **one version**, and has **one extension**. 
 
 2. Ontology repository, files and documentation links
+   
+![doc_files_url](https://github.com/user-attachments/assets/105c13cd-d07f-4ed3-8cb2-b04bbb7d7abc)
 
 Classes:
 * ``nfdciore:Source Code Repository``  <br/>
