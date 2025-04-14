@@ -3,9 +3,9 @@ Describing the metadata of semantic resources (repositories?) with NFDIcore
 
 ## TOC
  - intro
- - harvester tool description
  - ontology metadata
  - describing metadata
+ - harvester tool description
  - class definitions
 
 
@@ -101,6 +101,12 @@ To describe that particular person or an organization is a creator or a contact 
 Then we say that there is some agent and it is bearer of contact point and/or creator role, which is realized in contacting or creative process correspondingly. Ontology then participates in the corresponding process. As the shortcuts we have the corresponding properties has contact point and has creator which connect ontology to the corresponding agent. This approach solves the problem when one agent is creator and contact point of different ontologies. 
 Returning to our teacher and father example: if we would use the class-based approach, i.e., declaring new individuals for teacher, father, driver, buyer and so on, then we would end up in a situation where many of these classes stand for one person. And if we want to specify, let's say, the name of that person we would need to do this for all of these classes, unecessarily multiplying the object properties, pointing to the name. And how to clearly distinguish between the situations when the buyer, teacher, and father are and are not the one person? This is further complicated by the fact that in different situations this person can be called by different names at home or at school, so comparison of the names is not that straightforward. 
 The role-based pattern on the other hand helps to solve this problem by correctly modeling this aspect of reality: actually there is a person that bears the role which is realized in a particular situation (process). This way, we use the following schema:
+
+## Harvester tool description
+
+To facilitate the collection and structuring of information about ontologies do you use the automated 2 so-called GitHub repository harvester. It scans the repository checks the LDF containing files if any of them are apologies and then extracts the corresponding information which is to be put into the MSE knowledge graph. Some data curation of the automated output is still necessary however it is very minor part of work compared to the whole process this way it is by 90 to 95% automatized.
+
+
 
 ## Class definitions
 
