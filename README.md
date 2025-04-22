@@ -45,8 +45,13 @@ Properties:
 * ``obo:continuant part of``  <br/>
 * ``nfdicore: has value``  <br/>
 
-Similarly to what we have in software engineering repository for ontologies can contain different release versions with different features, e.g., ver. 0.1, ver. 1.2. This corresponds to the ontology release version class, which is connected with the property of or has continued part of ontology object. Each release version should ideally be characterized by its version IRI, for which we use nfdicore: has value data property. sometimes version iris are used incorrectly, containing information about file extensions or arbitrary comments. In turn, release verions can be present in different variants, meaning, e.g., "reasoned", where the inferred axioms are included, "full", with incorporated import statements. This corresponds to nfdicore: Ontology Variant class, which is obo: continuant part of the release version. If not specified explicitly, the variant of any version is considered to be "main release". The versions with all their variants are located in the files, having certain extensions. For this we use energy core data item which is about variants (now version!). 
-This way, **any** triplet-containig file, belonging to the ontology corresponds to **one variant** of **one version**, and has **one extension**. 
+Similarly to what we have in software engineering repository for ontologies can contain different release versions with different features, e.g., ver. 0.1, ver. 1.2. This corresponds to the ontology release version class, which is connected with the property of or has continued part of ontology object. Each release version should ideally be characterized by its version IRI, for which we use nfdicore: has value data property. sometimes version iris are used incorrectly, containing information about file extensions or arbitrary comments. If the version literal is actually an IRI (starts from http://) we use nfdicore:versionIRI class, otherwise we use nfdicore:versionNumber class. Ontology release version is obo: continuant part of the corresponding ontology. 
+
+In turn, release verions can be present in different variants, meaning, e.g., "reasoned", where the inferred axioms are included, "full", with incorporated import statements. This corresponds to nfdicore: Ontology Variant class, which is obo: continuant part of the release version. 
+
+Ontologies with their versions and variants are avtually located in the files, having certain extensions. For this we use nfdicore:dataItem. If variant is specified, we use say that dataItem obo:is_about variant. Alternatively, if no variant is present, but version is present, we assert dataItem obo:is_about ontology version statement. Lastly, if no variant and no version specified for the ontology, dataItem obo:is_about ontology. 
+
+Each file has one extension, and to instantiate the extension object, we use subclasses of edam:rdf format (subclass of iao:data format specification) - e.g., turtle format. To connect data item with the extension object, we use nfdicore:has format property. 
 
 ### 3. Ontology repository, files and documentation links
    
